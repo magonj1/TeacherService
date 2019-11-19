@@ -9,10 +9,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Teacher {
 	
 	@Id
-	private ObjectId teacher_id;
+	private String teacherId;
 	private String teacher_No;
 	private String firstName;
-	private String LastName;
+	private String lastName;
 	
 	
 	
@@ -20,14 +20,14 @@ public class Teacher {
 		super();
 		this.teacher_No = teacher_No;
 		this.firstName = firstName;
-		LastName = lastName;
+		this.lastName = lastName;
 	}
 	
-	public ObjectId getTeacher_id() {
-		return teacher_id;
+	public String getTeacher_id() {
+		return teacherId;
 	}
-	public void setTeacher_id(ObjectId teacher_id) {
-		this.teacher_id = teacher_id;
+	public void setTeacher_id(String teacherId) {
+		this.teacherId = teacherId;
 	}
 	public String getTeacher_No() {
 		return teacher_No;
@@ -42,16 +42,16 @@ public class Teacher {
 		this.firstName = firstName;
 	}
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		lastName = lastName;
 	}
 
 	@Override
 	public String toString() {
-		return "Teacher [teacher_id=" + teacher_id + ", teacher_No=" + teacher_No + ", firstName=" + firstName
-				+ ", LastName=" + LastName + "]";
+		return "Teacher [teacher_id=" + teacherId + ", teacher_No=" + teacher_No + ", firstName=" + firstName
+				+ ", LastName=" + lastName + "]";
 	}
 	
 	
